@@ -1,0 +1,323 @@
+[
+  {
+    "id": "attraction-001",
+    "name": "Pearl Harbor National Memorial",
+    "description": "A historic site commemorating the attack on Pearl Harbor and honoring those who served. Includes the USS Arizona Memorial, Battleship Missouri Memorial, and Pacific Aviation Museum.",
+    "location": {
+      "name": "Pearl Harbor Visitor Center",
+      "address": {
+        "streetNumber": "1",
+        "streetName": "Arizona Memorial Circle",
+        "city": "Honolulu",
+        "state": "HI",
+        "postalCode": "96818",
+        "country": "USA"
+      },
+      "latitude": 21.3654,
+      "longitude": -157.9499,
+      "timezone": "Pacific/Honolulu"
+    },
+    "type": "MUSEUM",
+    "media": [
+      {
+        "url": "https://www.nps.gov/perl/planyourvisit/upload/Pearl-Harbor-NSC-Banner-2018-2.jpg",
+        "width": 1200,
+        "height": 800,
+        "size": 350000,
+        "format": "jpeg",
+        "type": "image",
+        "altText": "Exterior view of Pearl Harbor National Memorial Visitor Center"
+      }
+    ],
+    "contact": {
+      "website": "https://www.nps.gov/valr/index.htm",
+      "phone": "(808) 422-3300"
+    },
+    "activities": [
+      {
+        "id": "activity-001-01",
+        "name": "USS Arizona Memorial Program",
+        "description": "Boat shuttle to the USS Arizona Memorial and visitor center exhibits.",
+        "type": "TOUR",
+        "durationMinutes": 75,
+        "price": 0,
+        "currency": "USD"
+      }
+    ],
+    "tags": ["history", "WWII", "memorial", "military", "museum"],
+    "rating": 4.8,
+    "reviewCount": 150000,
+    "priceRange": "$",
+    "admissionFee": 0,
+    "operatingHours": {
+      "Monday": "7:00 AM - 5:00 PM",
+      "Tuesday": "7:00 AM - 5:00 PM",
+      "Wednesday": "7:00 AM - 5:00 PM",
+      "Thursday": "7:00 AM - 5:00 PM",
+      "Friday": "7:00 AM - 5:00 PM",
+      "Saturday": "7:00 AM - 5:00 PM",
+      "Sunday": "7:00 AM - 5:00 PM"
+    }
+  },
+  {
+    "id": "attraction-002",
+    "name": "Diamond Head State Monument",
+    "description": "An iconic volcanic tuff cone offering panoramic views of Waikiki and the Pacific Ocean after a moderately challenging hike. Reservations are required for entry.",
+    "location": {
+      "name": "Diamond Head State Monument",
+      "address": {
+        "streetNumber": "18th",
+        "streetName": "Avenue",
+        "city": "Honolulu",
+        "state": "HI",
+        "postalCode": "96815",
+        "country": "USA"
+      },
+      "latitude": 21.2709,
+      "longitude": -157.8055,
+      "timezone": "Pacific/Honolulu"
+    },
+    "type": "NATURE",
+    "media": [
+      {
+        "url": "https://dlnr.hawaii.gov/dsp/files/2021/09/diamond-head.jpg",
+        "width": 1000,
+        "height": 667,
+        "size": 280000,
+        "format": "jpeg",
+        "type": "image",
+        "altText": "Hikers on the Diamond Head trail overlooking Waikiki"
+      }
+    ],
+    "contact": {
+      "website": "https://dlnr.hawaii.gov/dsp/parks/oahu/diamond-head-state-monument/",
+      "phone": "(808) 587-0300"
+    },
+    "activities": [
+      {
+        "id": "activity-002-01",
+        "name": "Diamond Head Summit Trail Hike",
+        "description": "Self-guided hike to the summit of Diamond Head crater. Reservations required.",
+        "type": "ADVENTURE",
+        "durationMinutes": 90,
+        "price": 5,
+        "currency": "USD"
+      }
+    ],
+    "tags": ["hiking", "views", "volcano", "landmark", "park", "nature"],
+    "rating": 4.6,
+    "reviewCount": 90000,
+    "priceRange": "$",
+    "admissionFee": 5,
+    "operatingHours": {
+      "Monday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)",
+      "Tuesday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)",
+      "Wednesday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)",
+      "Thursday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)",
+      "Friday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)",
+      "Saturday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)",
+      "Sunday": "6:00 AM - 4:00 PM (Last entry 2:00 PM)"
+    }
+  },
+  {
+    "id": "attraction-003",
+    "name": "Waikiki Beach",
+    "description": "World-famous stretch of sandy beach, popular for surfing, sunbathing, and vibrant nightlife. Part of the larger Honolulu coastline.",
+    "location": {
+      "name": "Waikiki Beach",
+      "address": {
+        "streetName": "Kalakaua Ave",
+        "city": "Honolulu",
+        "state": "HI",
+        "postalCode": "96815",
+        "country": "USA"
+      },
+      "latitude": 21.2766,
+      "longitude": -157.8273,
+      "timezone": "Pacific/Honolulu"
+    },
+    "type": "BEACH",
+    "media": [
+      {
+        "url": "https://media.cntraveler.com/photos/54a9355f30378037326442ef/master/w_1200,h_675,c_limit/waikiki-beach.jpg",
+        "width": 1600,
+        "height": 900,
+        "size": 450000,
+        "format": "jpeg",
+        "type": "image",
+        "altText": "Sunset over Waikiki Beach with surfers"
+      }
+    ],
+    "contact": {
+      "website": "https://www.waikikibeach.com/"
+    },
+    "activities": [
+      {
+        "id": "activity-003-01",
+        "name": "Surfing Lessons",
+        "description": "Group or private surfing lessons for beginners.",
+        "type": "ADVENTURE",
+        "durationMinutes": 120,
+        "price": 75,
+        "currency": "USD",
+        "bookingUrl": "https://example.com/surf-lessons"
+      },
+      {
+        "id": "activity-003-02",
+        "name": "Paddleboarding",
+        "description": "Rent a paddleboard and explore the calm waters of Waikiki.",
+        "type": "RECREATION",
+        "durationMinutes": 60,
+        "price": 30,
+        "currency": "USD"
+      }
+    ],
+    "tags": ["beach", "surfing", "swimming", "relax", "city"],
+    "rating": 4.7,
+    "reviewCount": 120000,
+    "priceRange": "$",
+    "admissionFee": 0,
+    "operatingHours": {
+      "Monday": "24/7",
+      "Tuesday": "24/7",
+      "Wednesday": "24/7",
+      "Thursday": "24/7",
+      "Friday": "24/7",
+      "Saturday": "24/7",
+      "Sunday": "24/7"
+    }
+  },
+  {
+    "id": "attraction-004",
+    "name": "North Shore (Waimea Bay, Sunset Beach, Pipeline)",
+    "description": "The legendary North Shore of Oahu, famous for its big waves in winter, surf competitions, and beautiful beaches like Waimea Bay, Sunset Beach, and Banzai Pipeline. Best for experienced surfers in winter, great for swimming and sunbathing in summer.",
+    "location": {
+      "name": "North Shore",
+      "address": {
+        "streetName": "Kamehameha Hwy",
+        "city": "Haleiwa",
+        "state": "HI",
+        "postalCode": "96712",
+        "country": "USA"
+      },
+      "latitude": 21.6444,
+      "longitude": -158.0505,
+      "timezone": "Pacific/Honolulu"
+    },
+    "type": "BEACH",
+    "media": [
+      {
+        "url": "https://www.nationalgeographic.com/content/dam/travel/photos/000/775/77536.ngsimage.adapt.1900.1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "size": 600000,
+        "format": "jpeg",
+        "type": "image",
+        "altText": "Surfer riding a large wave at Banzai Pipeline on the North Shore"
+      }
+    ],
+    "contact": {
+      "website": "https://www.hawaiilife.com/blog/ultimate-guide-oahu-north-shore/"
+    },
+    "activities": [
+      {
+        "id": "activity-004-01",
+        "name": "Winter Big Wave Watching",
+        "description": "Witness world-class surfers tackle massive waves during the winter months (November-February).",
+        "type": "SIGHTSEEING",
+        "durationMinutes": 180,
+        "price": 0,
+        "currency": "USD"
+      },
+      {
+        "id": "activity-004-02",
+        "name": "Swimming & Snorkeling (Summer)",
+        "description": "Enjoy calm waters for swimming and snorkeling during the summer season (May-September).",
+        "type": "RECREATION",
+        "durationMinutes": 90,
+        "price": 0,
+        "currency": "USD"
+      }
+    ],
+    "tags": ["surfing", "beaches", "scenic drive", "food trucks", "nature"],
+    "rating": 4.8,
+    "reviewCount": 70000,
+    "priceRange": "$",
+    "admissionFee": 0,
+    "operatingHours": {
+      "Monday": "24/7",
+      "Tuesday": "24/7",
+      "Wednesday": "24/7",
+      "Thursday": "24/7",
+      "Friday": "24/7",
+      "Saturday": "24/7",
+      "Sunday": "24/7"
+    }
+  },
+  {
+    "id": "attraction-005",
+    "name": "Hanauma Bay Nature Preserve",
+    "description": "A protected marine life conservation area and popular snorkeling spot, renowned for its clear waters and abundant fish. Reservations are required.",
+    "location": {
+      "name": "Hanauma Bay",
+      "address": {
+        "streetNumber": "7451",
+        "streetName": "Kalanianaʻole Hwy",
+        "city": "Honolulu",
+        "state": "HI",
+        "postalCode": "96825",
+        "country": "USA"
+      },
+      "latitude": 21.2676,
+      "longitude": -157.7027,
+      "timezone": "Pacific/Honolulu"
+    },
+    "type": "NATURE",
+    "media": [
+      {
+        "url": "https://www.hawaiilife.com/blog/wp-content/uploads/2016/09/Hanauma-Bay.jpg",
+        "width": 1400,
+        "height": 933,
+        "size": 400000,
+        "format": "jpeg",
+        "type": "image",
+        "altText": "Aerial view of Hanauma Bay with snorkelers in the water"
+      }
+    ],
+    "contact": {
+      "website": "https://www.hanaumabaystatepark.com/",
+      "phone": "(808) 768-6861"
+    },
+    "activities": [
+      {
+        "id": "activity-005-01",
+        "name": "Snorkeling in Hanauma Bay",
+        "description": "Explore the vibrant coral reefs and marine life by snorkeling. Mandatory educational video prior to entry. Reservations required.",
+        "type": "RECREATION",
+        "durationMinutes": 180,
+        "price": 25,
+        "currency": "USD"
+      }
+    ],
+    "tags": [
+      "snorkeling",
+      "marine life",
+      "nature preserve",
+      "beach",
+      "conservation"
+    ],
+    "rating": 4.7,
+    "reviewCount": 60000,
+    "priceRange": "$$",
+    "admissionFee": 25,
+    "operatingHours": {
+      "Monday": "Closed",
+      "Tuesday": "6:45 AM - 4:00 PM",
+      "Wednesday": "6:45 AM - 4:00 PM",
+      "Thursday": "6:45 AM - 4:00 PM",
+      "Friday": "6:45 AM - 4:00 PM",
+      "Saturday": "6:45 AM - 4:00 PM",
+      "Sunday": "6:45 AM - 4:00 PM"
+    }
+  }
+]
