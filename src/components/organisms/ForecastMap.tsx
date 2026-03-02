@@ -2,6 +2,7 @@ import { useState } from "react";
 import { cva } from "class-variance-authority";
 import { Map } from "@/components/molecules/maps/Map";
 import { ThreeHourForecastCard } from "@/components/molecules/cards/weather/ThreeHourForecastCard";
+import { GeoPoint } from "@/lib/types";
 
 const hourForecasts = [
   {
@@ -31,7 +32,7 @@ interface ForecastMapProps extends React.HTMLAttributes<HTMLDivElement> {
   latitude: number;
   longitude: number;
   zoom: number;
-  markers?: Array<{ latitude: number; longitude: number }>;
+  markers?: Array<GeoPoint>;
   children?: React.ReactNode;
   variant?: "default" | "compact" | "detailed";
   status?: "success" | "warning" | "error" | "info" | "neutral";
@@ -67,10 +68,7 @@ function ForecastMap({
   markers,
   ...props
 }: ForecastMapProps) {
-  const [currentMarker, setCurrentMarker] = useState<{
-    latitude: number;
-    longitude: number;
-  } | null>(null);
+  const [currentMarker, setCurrentMarker] = useState<GeoPoint | null>(null);
   return (
     <div>
       <Map
@@ -84,7 +82,7 @@ function ForecastMap({
         }}
       />
       {currentMarker && (
-        <div className="absolute py-4 top-50 right-10 w-[450px] outline-none">
+        <div className="absolute py-4 top-25 right-5 w-[450px] outline-none">
           <ThreeHourForecastCard
             title={`${currentMarker.latitude}, ${currentMarker.longitude}`}
             description={`${currentMarker.latitude}, ${currentMarker.longitude}`}

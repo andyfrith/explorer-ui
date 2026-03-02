@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/atoms/card";
+import { CurrentWeather } from "@/components/atoms/CurrentWeather";
 
 interface WeatherCardProps extends React.HTMLAttributes<HTMLDivElement> {
   weatherIcon: React.ReactNode;
@@ -97,7 +98,17 @@ function WeatherCard({
         </div>
       </CardHeader>
       <CardContent className={cn("py-4 ", variant === "compact" && "pt-0")}>
-        <div
+        <CurrentWeather
+          icon={weatherIcon}
+          image={weatherImage}
+          title={title || ""}
+          temperature={temperature}
+          conditions={conditions}
+          apparentTemperature={apparentTemperature}
+          variant={variant}
+          status={status}
+        />
+        {/* <div
           className="text-white p-4"
           style={{
             backgroundImage: `url(${weatherImage.src})`,
@@ -130,7 +141,7 @@ function WeatherCard({
           >
             {apparentTemperature}
           </div>
-        </div>
+        </div> */}
       </CardContent>
       {/* <CardContent className={cn('py-4', variant === 'compact' && 'pt-0')}>
         <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />

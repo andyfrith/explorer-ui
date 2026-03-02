@@ -1,12 +1,12 @@
-export interface City {
-  city: string;
-  population: string;
-  image: string;
-  state: string;
-  latitude: number;
-  longitude: number;
-}
-
+// export interface City {
+//   city: string;
+//   population: string;
+//   image: string;
+//   state: string;
+//   latitude: number;
+//   longitudegitude: number;
+// }
+import { City } from "@/lib/types";
 export const CITIES: Array<City> = [
   {
     city: "Honolulu",

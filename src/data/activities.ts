@@ -1,15 +1,4 @@
-export interface Activity {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  shortDescription: string;
-  price: number;
-  city: string;
-  state: string;
-  latitude: number;
-  longitude: number;
-}
+import { Activity } from "@/lib/types";
 
 const activities: Array<Activity> = [
   {

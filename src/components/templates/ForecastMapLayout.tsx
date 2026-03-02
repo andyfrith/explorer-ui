@@ -1,7 +1,14 @@
 import { cva } from "class-variance-authority";
+import { ForecastMap } from "../organisms/ForecastMap";
+import { Header } from "../organisms/Header";
+import { GeoPoint } from "@/lib/types";
 
 interface ForecastMapLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  latitude: number;
+  longitude: number;
+  zoom: number;
+  markers: Array<GeoPoint>;
 }
 
 const forecastMapLayoutVariants = cva("transition-all duration-200", {
@@ -28,8 +35,26 @@ const forecastMapLayoutVariants = cva("transition-all duration-200", {
   },
 });
 
-function ForecastMapLayout({ children, ...props }: ForecastMapLayoutProps) {
-  return <div {...props}>{children}</div>;
+function ForecastMapLayout({
+  children,
+  latitude,
+  longitude,
+  zoom,
+  markers,
+  ...props
+}: ForecastMapLayoutProps) {
+  return (
+    <div {...props} className={"w-screen h-screen"}>
+      {children}
+      <Header />
+      <ForecastMap
+        latitude={latitude}
+        longitude={longitude}
+        zoom={zoom}
+        markers={markers}
+      />
+    </div>
+  );
 }
 
 ForecastMapLayout.displayName = "ForecastMapLayout";

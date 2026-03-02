@@ -32,3 +32,35 @@ export const WithMarkers: Story = {
     />
   ),
 };
+
+export const WithDimensions: Story = {
+  render: () => (
+    <Map
+      variant="default"
+      latitude={20.77}
+      longitude={-156.33}
+      zoom={10}
+      markers={activities}
+      width={400}
+      height={400}
+      onSelectMarker={(marker) => {
+        console.log(marker);
+      }}
+    />
+  ),
+};
+
+export const Full: Story = {
+  render: () => (
+    <Map
+      variant="full"
+      latitude={20.77}
+      longitude={-156.33}
+      zoom={10}
+      markers={activities}
+      onSelectMarker={(marker) => {
+        console.log(marker);
+      }}
+    />
+  ),
+};

@@ -25,7 +25,7 @@ interface ThreeHourForecastCardProps extends React.HTMLAttributes<HTMLDivElement
   hourForecasts: HourForecast[];
   title?: string;
   description?: string;
-  variant?: "default" | "compact" | "detailed";
+  variant?: "default" | "compact" | "large" | "full";
   status?: "success" | "warning" | "error" | "info" | "neutral";
   onDismiss?: () => void;
 }
@@ -33,9 +33,10 @@ interface ThreeHourForecastCardProps extends React.HTMLAttributes<HTMLDivElement
 const threeHourForecastCardVariants = cva("transition-all duration-200", {
   variants: {
     variant: {
-      default: "p-6",
+      default: "p-6 m-10",
       compact: "p-4",
-      detailed: "p-6 space-y-4",
+      large: "p-6 m-10",
+      full: "max-w-full",
     },
     status: {
       success:

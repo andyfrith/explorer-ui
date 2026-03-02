@@ -94,7 +94,7 @@ function MetricCard({
   ...props
 }: MetricCardProps) {
   return (
-    <Card {...props}>
+    <Card {...props} className={cn(metricCardVariants({ variant, className }))}>
       {/* Card Header with title and description */}
       <CardHeader
         className={cn(

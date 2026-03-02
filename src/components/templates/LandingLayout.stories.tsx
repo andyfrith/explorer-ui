@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ForecastMapLayout } from "@/components/templates/ForecastMapLayout";
+import { LandingLayout } from "@/components/templates/LandingLayout";
 import { CITIES } from "@/data/oahu/cities";
 
-const meta: Meta<typeof ForecastMapLayout> = {
-  title: "Templates/ForecastMapLayout",
-  component: ForecastMapLayout,
+const meta: Meta<typeof LandingLayout> = {
+  title: "Templates/LandingLayout",
+  component: LandingLayout,
   tags: ["autodocs"],
   argTypes: {},
 };
 
 export default meta;
-type Story = StoryObj<typeof ForecastMapLayout>;
+type Story = StoryObj<typeof LandingLayout>;
 
 export const Default: Story = {
   render: () => (
-    <ForecastMapLayout
+    <LandingLayout
       latitude={21.3935}
       longitude={-157.9564}
       zoom={10}

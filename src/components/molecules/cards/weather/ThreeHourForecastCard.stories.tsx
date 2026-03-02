@@ -40,3 +40,29 @@ export const Compact: Story = {
     variant: "compact",
   },
 };
+
+export const Large: Story = {
+  render: () => (
+    <ThreeHourForecastCard
+      hourForecasts={MOCK_THREE_HOUR_FORECAST}
+      variant="large"
+    />
+  ),
+  args: {
+    hourForecasts: MOCK_THREE_HOUR_FORECAST,
+    variant: "large",
+  },
+};
+
+export const Full: Story = {
+  render: () => (
+    <ThreeHourForecastCard
+      hourForecasts={MOCK_THREE_HOUR_FORECAST}
+      variant="full"
+    />
+  ),
+  args: {
+    hourForecasts: MOCK_THREE_HOUR_FORECAST,
+    variant: "full",
+  },
+};

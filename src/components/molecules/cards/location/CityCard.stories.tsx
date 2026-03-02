@@ -46,3 +46,21 @@ a dense, culturally diverse, and innovative city renowned for its iconic Golden 
     />
   ),
 };
+
+export const Full: Story = {
+  render: () => (
+    <CityCard
+      city="San Francisco"
+      state="California"
+      country="United States"
+      description="San Francisco, located on a hilly California peninsula, is
+a dense, culturally diverse, and innovative city renowned for its iconic Golden Gate Bridge,, historic cable cars, and Victorian architecture. It is a major financial and tech hub, blending a scenic waterfront, unpredictable foggy weather, and distinct, vibrant neighborhoods."
+      image={{
+        src: "/images/locations/SanFranciscoSkyline.jpg",
+        alt: "San Francisco",
+        title: "San Francisco",
+      }}
+      variant="full"
+    />
+  ),
+};
