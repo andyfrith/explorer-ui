@@ -15,3 +15,11 @@ type Story = StoryObj<typeof Destinations>;
 export const Default: Story = {
   render: () => <Destinations destinations={destinations} />,
 };
+
+export const Compact: Story = {
+  render: () => <Destinations destinations={destinations} variant="compact" />,
+};
+
+export const Aside: Story = {
+  render: () => <Destinations destinations={destinations} variant="aside" />,
+};

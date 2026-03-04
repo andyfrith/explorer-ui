@@ -70,7 +70,7 @@ function DestinationsLayout({
               <SunIcon className="w-10 h-10 md:w-10 md:h-10 text-cyan-400" />
             }
             title="EXPLORER"
-            subtitle="AI"
+            subtitle="UI"
           />
         }
         headline="Are you ready for your next great adventure?"

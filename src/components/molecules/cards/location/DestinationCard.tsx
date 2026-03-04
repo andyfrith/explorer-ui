@@ -7,11 +7,11 @@ import {
 } from "@/components/atoms/card";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { ThreeHourForecastCard } from "../weather/ThreeHourForecastCard";
-import { MOCK_THREE_HOUR_FORECAST } from "@/data/mockThreeHourForecast";
-import { WeatherCard } from "../weather/WeatherCard";
-import { CloudSun, SunIcon } from "lucide-react";
+import { SunIcon } from "lucide-react";
 import { CurrentWeather } from "@/components/atoms/CurrentWeather";
+import { Text } from "@/components/atoms/Text";
+import { ImageCarousel } from "@/components/atoms/ImageCarousel";
+import { Quote } from "@/components/atoms/Quote";
 
 interface DestinationCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -64,14 +64,29 @@ function DestinationCard({
           </CardDescription>
         )}
       </CardHeader>
-
-      <CardContent>
-        <div className="flex">
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-medium">{article}</p>
-          </div>
-          <div className="flex flex-col gap-3">
-            {variant === "detailed" && (
+      {variant === "detailed" && (
+        <CardContent>
+          <div className="flex gap-3">
+            <div className="flex flex-col gap-3">
+              <ImageCarousel
+                images={[
+                  "/public/images/locations/HonoluluBeach.jpg",
+                  "/public/images/locations/Alaska.jpeg",
+                  "/public/images/locations/Paris.webp",
+                  "/public/images/locations/SanFranciscoSkyline.jpg",
+                  "/public/images/locations/qiddiya-performing-arts-centre.webp",
+                  "/public/images/locations/NewYorkStatueofLiberty.avif",
+                ]}
+                variant="default"
+              />
+              {article && <Text variant="p">{article}</Text>}
+            </div>
+            <div className="flex flex-col gap-3">
+              <Quote
+                quote="Be the Aloha you wish to see in the world."
+                author="Anonymous"
+                variant="aside"
+              />
               <CurrentWeather
                 icon={
                   <SunIcon className="w-10 h-10 md:w-10 md:h-10 text-cyan-400" />
@@ -87,10 +102,11 @@ function DestinationCard({
                   title: "Partly Cloudy Day",
                 }}
               />
-            )}
+              {/* <Destinations destinations={destinations} variant="aside" /> */}
+            </div>
           </div>
-        </div>
-      </CardContent>
+        </CardContent>
+      )}
     </Card>
   );
 }

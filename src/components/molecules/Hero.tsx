@@ -1,4 +1,5 @@
 import { cva } from "class-variance-authority";
+import { Text } from "@/components/atoms/Text";
 
 interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
   logo?: React.ReactNode;
@@ -15,20 +16,9 @@ const heroVariants = cva("transition-all duration-200", {
       compact: "p-2",
       detailed: "p-2 space-y-4",
     },
-    status: {
-      success:
-        "border-green-200 bg-green-50/50 dark:border-green-800 dark:bg-green-950/50",
-      warning:
-        "border-yellow-200 bg-yellow-50/50 dark:border-yellow-800 dark:bg-yellow-950/50",
-      error:
-        "border-red-200 bg-red-50/50 dark:border-red-800 dark:bg-red-950/50",
-      info: "border-blue-200 bg-blue-50/50 dark:border-blue-800 dark:bg-blue-950/50",
-      neutral: "",
-    },
   },
   defaultVariants: {
     variant: "default",
-    status: "neutral",
   },
 });
 
@@ -47,18 +37,17 @@ function Hero({
         <div className="flex items-center justify-center gap-6 mb-6">
           {logo}
         </div>
-        {/* <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-          {" "}
-          {headline}
-        </h3>
-        <p className="leading-7 [&:not(:first-child)]:mt-6">{subheadline}</p>
-         */}
-        <p className="text-2xl md:text-3xl dark:text-gray-300 mb-4 font-light">
+        <Text variant="h2">{headline}</Text>
+        <Text variant="large">{subheadline}</Text>
+        <br />
+        <br />
+        <br />
+        {/* <p className="text-2xl md:text-3xl dark:text-gray-300 mb-4 font-light">
           {headline}
         </p>
         <p className="text-lg dark:text-gray-400 max-w-3xl mx-auto mb-8">
           {subheadline}
-        </p>
+        </p> */}
         {cta}
       </div>
     </section>

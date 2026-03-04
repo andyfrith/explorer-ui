@@ -64,6 +64,7 @@ function CurrentWeather({
         backgroundPosition: "center",
         borderRadius: "8px",
       }}
+      {...props}
     >
       <div className="flex items-center gap-2">
         {icon}

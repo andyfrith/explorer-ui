@@ -257,3 +257,22 @@
     @apply font-sans;
   }
 }
+
+.quote {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  background-color: #f8f8f8;
+  padding: 1rem 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: italic;
+  margin: calc(var(--spacing) * 2) 0 0 0;
+  color: #828282;
+  border-radius: 0.5rem;
+}
+
+.quotation-mark {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #828282;
+}
