@@ -16,7 +16,7 @@ Explorer UI isn’t just a component library — it’s a design foundation for 
 
 ---
 
-![Screenshot: Destination Selection Experience](./screenshot1.png)
+![Screenshot1: Destination Selection Experience](./screenshot1.png)
 
 ---
 
@@ -52,8 +52,6 @@ graph TD
     C --> D[Templates]
     D --> E[Pages]
 ```
-
-````
 
 This allows us to:
 
@@ -286,4 +284,3 @@ pnpm run storybook
 Explorer UI is not just about building screens.
 
 It’s about designing how travelers experience intelligent assistance.
-````
