@@ -1,4 +1,3 @@
-````markdown
 # 🌍 Explorer UI
 
 ### Designing Intelligent Travel Experiences
@@ -53,6 +52,7 @@ graph TD
     C --> D[Templates]
     D --> E[Pages]
 ```
+
 ````
 
 This allows us to:
@@ -286,7 +286,4 @@ pnpm run storybook
 Explorer UI is not just about building screens.
 
 It’s about designing how travelers experience intelligent assistance.
-
-```
-
-```
+````
