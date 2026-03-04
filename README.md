@@ -2,7 +2,7 @@
 
 ### Designing Intelligent Travel Experiences
 
-Explorer UI is a composable UI system built for modern travel applications that blend **AI storytelling, real-time data, and beautiful interface design**.
+Explorer UI is a composable UI system built for modern travel applications that blends **AI storytelling, real-time data, and beautiful interface design**.
 
 Built with:
 
@@ -213,11 +213,6 @@ It provides:
 - Accessibility review
 - Prop-level experimentation
 
-```bash
-pnpm install
-pnpm run storybook
-```
-
 Storybook transforms the UI library into a living design system.
 
 ---
@@ -284,3 +279,11 @@ pnpm run storybook
 Explorer UI is not just about building screens.
 
 It’s about designing how travelers experience intelligent assistance.
+
+## 📫 Let's Connect
+
+- **Portfolio**: [andyfrith.com](https://andyfrith.com)
+- **LinkedIn**: [linkedin.com/in/goodapplemedia](https://linkedin.com/in/goodapplemedia)
+- **GitHub**: [@andyfrith](https://github.com/andyfrith)
+
+> _"Delivering sound, proven, and trusted architecture solutions that are ready for any challenge."_
