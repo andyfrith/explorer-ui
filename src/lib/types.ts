@@ -1,9 +1,36 @@
-export interface Destination {
+export enum MediaType {
+  IMAGE = "image",
+  VIDEO = "video",
+  AUDIO = "audio",
+}
+
+export interface Media {
+  title?: string;
+  description?: string;
+  image: string;
+  thumbnailImage: string;
+  url?: string;
+  type: MediaType;
+  altText?: string;
+  width?: number;
+  height?: number;
+  size?: number;
+  duration?: number;
+  format?: string;
+}
+
+export interface Attraction extends GeoPoint {
+  id: string;
   name: string;
   description: string;
-  image: { src: string; alt: string; title: string };
-  latitude: number;
-  longitude: number;
+  media: Media[];
+}
+
+export interface Destination extends GeoPoint {
+  name: string;
+  description: string;
+  media: Media[];
+  attractions: Attraction[];
 }
 
 export interface Feature {

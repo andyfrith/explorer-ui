@@ -3,6 +3,8 @@
     "id": "attraction-001",
     "name": "Pearl Harbor National Memorial",
     "description": "A historic site commemorating the attack on Pearl Harbor and honoring those who served. Includes the USS Arizona Memorial, Battleship Missouri Memorial, and Pacific Aviation Museum.",
+    "latitude": 21.3654,
+    "longitude": -157.9499,
     "location": {
       "name": "Pearl Harbor Visitor Center",
       "address": {
@@ -20,7 +22,9 @@
     "type": "MUSEUM",
     "media": [
       {
-        "url": "https://www.nps.gov/perl/planyourvisit/upload/Pearl-Harbor-NSC-Banner-2018-2.jpg",
+        "image": "/public/images/locations/PearlHarborMemorial.jpg",
+        "thumbnailImage": "/public/images/locations/PearlHarborMemorial.jpg",
+        "url": "/public/images/locations/PearlHarborMemorial.jpg",
         "width": 1200,
         "height": 800,
         "size": 350000,
@@ -63,6 +67,8 @@
     "id": "attraction-002",
     "name": "Diamond Head State Monument",
     "description": "An iconic volcanic tuff cone offering panoramic views of Waikiki and the Pacific Ocean after a moderately challenging hike. Reservations are required for entry.",
+    "latitude": 21.2709,
+    "longitude": -157.8055,
     "location": {
       "name": "Diamond Head State Monument",
       "address": {
@@ -80,7 +86,9 @@
     "type": "NATURE",
     "media": [
       {
-        "url": "https://dlnr.hawaii.gov/dsp/files/2021/09/diamond-head.jpg",
+        "image": "/images/attractions/oahu/DiamondHead.jpg",
+        "thumbnailImage": "/images/attractions/oahu/DiamondHead.jpg",
+        "url": "/public/images/locations/PearlHarborMemorial.jpg",
         "width": 1000,
         "height": 667,
         "size": 280000,
@@ -123,6 +131,8 @@
     "id": "attraction-003",
     "name": "Waikiki Beach",
     "description": "World-famous stretch of sandy beach, popular for surfing, sunbathing, and vibrant nightlife. Part of the larger Honolulu coastline.",
+    "latitude": 21.2766,
+    "longitude": -157.8273,
     "location": {
       "name": "Waikiki Beach",
       "address": {
@@ -139,7 +149,9 @@
     "type": "BEACH",
     "media": [
       {
-        "url": "https://media.cntraveler.com/photos/54a9355f30378037326442ef/master/w_1200,h_675,c_limit/waikiki-beach.jpg",
+        "image": "/images/attractions/oahu/WaikikiBeach.jpg",
+        "thumbnailImage": "/images/attractions/oahu/WaikikiBeach.jpg",
+        "url": "/public/images/locations/PearlHarborMemorial.jpg",
         "width": 1600,
         "height": 900,
         "size": 450000,
@@ -191,6 +203,8 @@
     "id": "attraction-004",
     "name": "North Shore (Waimea Bay, Sunset Beach, Pipeline)",
     "description": "The legendary North Shore of Oahu, famous for its big waves in winter, surf competitions, and beautiful beaches like Waimea Bay, Sunset Beach, and Banzai Pipeline. Best for experienced surfers in winter, great for swimming and sunbathing in summer.",
+    "latitude": 21.6444,
+    "longitude": -158.0505,
     "location": {
       "name": "North Shore",
       "address": {
@@ -207,7 +221,9 @@
     "type": "BEACH",
     "media": [
       {
-        "url": "https://www.nationalgeographic.com/content/dam/travel/photos/000/775/77536.ngsimage.adapt.1900.1.jpg",
+        "image": "/images/attractions/oahu/NorthShore.jpg",
+        "thumbnailImage": "/images/attractions/oahu/NorthShore.jpg",
+        "url": "/public/images/locations/PearlHarborMemorial.jpg",
         "width": 1920,
         "height": 1080,
         "size": 600000,
@@ -258,6 +274,8 @@
     "id": "attraction-005",
     "name": "Hanauma Bay Nature Preserve",
     "description": "A protected marine life conservation area and popular snorkeling spot, renowned for its clear waters and abundant fish. Reservations are required.",
+    "latitude": 21.2676,
+    "longitude": -157.7027,
     "location": {
       "name": "Hanauma Bay",
       "address": {
@@ -275,7 +293,9 @@
     "type": "NATURE",
     "media": [
       {
-        "url": "https://www.hawaiilife.com/blog/wp-content/uploads/2016/09/Hanauma-Bay.jpg",
+        "image": "/images/attractions/oahu/HanaumaBay.jpg",
+        "thumbnailImage": "/images/attractions/oahu/HanaumaBay.jpg",
+        "url": "/public/images/locations/PearlHarborMemorial.jpg",
         "width": 1400,
         "height": 933,
         "size": 400000,

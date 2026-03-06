@@ -1,11 +1,10 @@
 import { cva } from "class-variance-authority";
-import { Hero } from "../molecules/Hero";
 import { Header } from "../organisms/Header";
-import { GeoPoint } from "@/lib/types";
-import { Branding } from "../atoms/Branding";
-import { SunIcon } from "lucide-react";
-import { Features } from "../molecules/Features";
-import features from "@/data/features";
+import { type Attraction, GeoPoint } from "@/lib/types";
+import { itemsToMedia } from "@/lib/carousel";
+import { destinations } from "@/data/destinations";
+import { SwiperCarousel } from "@/components/molecules/SwiperCarousel";
+import { Text } from "@/components/atoms/Text";
 
 interface DestinationLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
@@ -13,31 +12,25 @@ interface DestinationLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   longitude: number;
   zoom: number;
   markers: Array<GeoPoint>;
+  attractions?: Attraction[];
+  variant?: "default" | "compact" | "detailed";
 }
 
-const destinationLayoutVariants = cva("transition-all duration-200", {
-  variants: {
-    variant: {
-      default: "p-6",
-      compact: "p-4",
-      detailed: "p-6 space-y-4",
+const destinationLayoutVariants = cva(
+  "transition-all duration-200 w-screen h-screen",
+  {
+    variants: {
+      variant: {
+        default: "p-6",
+        compact: "p-4",
+        detailed: "p-6 space-y-4",
+      },
     },
-    status: {
-      success:
-        "border-green-200 bg-green-50/50 dark:border-green-800 dark:bg-green-950/50",
-      warning:
-        "border-yellow-200 bg-yellow-50/50 dark:border-yellow-800 dark:bg-yellow-950/50",
-      error:
-        "border-red-200 bg-red-50/50 dark:border-red-800 dark:bg-red-950/50",
-      info: "border-blue-200 bg-blue-50/50 dark:border-blue-800 dark:bg-blue-950/50",
-      neutral: "",
+    defaultVariants: {
+      variant: "default",
     },
   },
-  defaultVariants: {
-    variant: "default",
-    status: "neutral",
-  },
-});
+);
 
 function DestinationLayout({
   children,
@@ -45,40 +38,48 @@ function DestinationLayout({
   longitude,
   zoom,
   markers,
+  attractions = [],
+  variant = "default",
   ...props
 }: DestinationLayoutProps) {
+  const carouselItems = itemsToMedia(destinations);
+  const attractionCarouselItems = itemsToMedia(attractions);
   return (
-    <div {...props} className={"w-screen h-screen"}>
+    <div {...props} className={destinationLayoutVariants({ variant })}>
       {children}
       <Header />
-      <Hero
-        cta={
-          <div className="flex flex-col items-center gap-4">
-            <a
-              href="https://tanstack.com/start"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors shadow-lg shadow-cyan-500/50"
-            >
-              Documentation
-            </a>
-          </div>
-        }
-        logo={
-          <Branding
-            logo={
-              <SunIcon className="w-10 h-10 md:w-10 md:h-10 text-cyan-400" />
-            }
-            title="EXPLORER"
-            subtitle="AI"
+      <div className="py-16 px-6 max-w-7xl mx-auto space-y-16">
+        <div className="flex justify-center" key="destinations-carousel">
+          <SwiperCarousel
+            key="destinations"
+            className="destinations-carousel"
+            variant="thumbnailsNav"
+            items={carouselItems}
+            showItemCaption
           />
-        }
-        headline="A demo application of next generation AI and weather data"
-        subheadline="Built using TanStack Start, TanStack Router, and TanStack Query.
-            Fueled by data from the OpenWeatherMap API. Touched by Google Gemini
-            AI."
-      />
-      <Features features={features} />
+        </div>
+        {attractionCarouselItems.length > 0 && (
+          <section
+            className="space-y-6"
+            aria-labelledby="attractions-heading"
+            key="attractions-section"
+          >
+            <Text variant="h3">Attractions</Text>
+            <div
+              className="flex justify-center attractions-carousel-wrapper"
+              key="attractions-carousel"
+            >
+              <SwiperCarousel
+                key="attractions"
+                className="attractions-carousel"
+                variant="thumbnailsNav"
+                items={attractionCarouselItems}
+                showItemCaption
+              />
+            </div>
+          </section>
+        )}
+      </div>
     </div>
   );
 }

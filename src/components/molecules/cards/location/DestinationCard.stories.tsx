@@ -4,6 +4,9 @@ import { DestinationCard } from "@/components/molecules/cards/location/Destinati
 const meta: Meta<typeof DestinationCard> = {
   title: "Molecules/Cards/Location/DestinationCard",
   component: DestinationCard,
+  parameters: {
+    layout: "centered",
+  },
   tags: ["autodocs"],
   argTypes: {},
 };

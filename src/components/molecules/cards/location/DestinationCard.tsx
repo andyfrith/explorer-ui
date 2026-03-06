@@ -18,6 +18,7 @@ interface DestinationCardProps extends React.HTMLAttributes<HTMLDivElement> {
   description: string;
   article?: string;
   image: { src: string; alt: string; title: string };
+  url?: string;
   variant: "default" | "compact" | "full" | "detailed";
 }
 const destinationCardVariants = cva("transition-all duration-200", {
@@ -39,11 +40,25 @@ function DestinationCard({
   description,
   article,
   image,
+  url,
   variant = "default",
   ...props
 }: DestinationCardProps) {
   return (
-    <Card {...props} className={cn(destinationCardVariants({ variant }))}>
+    <Card
+      {...props}
+      className={cn(
+        destinationCardVariants({ variant }),
+        "dark:bg-slate-800/50 dark:backdrop-blur-sm border rounded-2xl dark:border-slate-700 transition-all duration-300",
+        url &&
+          "hover:bg-gray-100 dark:hover:bg-gray-900 hover:shadow-lg hover:shadow-gray-900/10 hover:cursor-pointer dark:hover:border-cyan-500/50 hover:border-gray-900/50",
+      )}
+      onClick={() => {
+        if (url) {
+          window.location.href = url;
+        }
+      }}
+    >
       <img
         src={image.src}
         alt={image.alt}

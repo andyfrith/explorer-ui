@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { DestinationLayout } from "@/components/templates/DestinationLayout";
 import { CITIES } from "@/data/oahu/cities";
+import { oahuAttractions } from "@/data/oahu/attractions";
 
 const meta: Meta<typeof DestinationLayout> = {
   title: "Templates/DestinationLayout",
@@ -19,6 +20,7 @@ export const Default: Story = {
       longitude={-157.9564}
       zoom={10}
       markers={CITIES}
+      attractions={oahuAttractions}
     />
   ),
 };

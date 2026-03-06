@@ -1,26 +1,26 @@
 import { cva } from "class-variance-authority";
-import { type Destination, Media, MediaType } from "@/lib/types";
-import { DestinationCard } from "@/components/molecules/cards/location/DestinationCard";
+import { type Attraction, Media, MediaType } from "@/lib/types";
+import { AttractionCard } from "@/components/molecules/cards/location/AttractionCard";
 import { SwiperCarousel } from "@/components/molecules/SwiperCarousel";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-interface DestinationsProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Destinations to display. */
-  destinations: Destination[];
+interface AttractionsProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** Attractions to display. */
+  attractions: Attraction[];
   children?: React.ReactNode;
   /** Layout: "grid" (default) or "carousel". */
   display?: "grid" | "carousel";
   variant?: "default" | "compact" | "detailed" | "aside";
 }
 
-/** Maps Destination data to Media format for SwiperCarousel. */
-function destinationsToMedia(destinations: Destination[]): Media[] {
-  return destinations.map((d) => {
-    const first = d.media[0];
+/** Maps Attraction data to Media format for SwiperCarousel. */
+function attractionsToMedia(attractions: Attraction[]): Media[] {
+  return attractions.map((a) => {
+    const first = a.media[0];
     return {
-      title: d.name,
-      description: d.description,
+      title: a.name,
+      description: a.description,
       image: first?.image ?? "",
       thumbnailImage: first?.thumbnailImage ?? first?.image ?? "",
       type: MediaType.IMAGE,
@@ -29,7 +29,7 @@ function destinationsToMedia(destinations: Destination[]): Media[] {
   });
 }
 
-const destinationsVariants = cva("transition-all duration-200", {
+const attractionsVariants = cva("transition-all duration-200", {
   variants: {
     variant: {
       default: "py-16 px-6 max-w-7xl mx-auto",
@@ -57,17 +57,17 @@ const fadeInAnimationVariants = {
   }),
 };
 
-function Destinations({
+function Attractions({
   children,
-  destinations,
+  attractions,
   display = "grid",
   variant = "default",
   ...props
-}: DestinationsProps) {
+}: AttractionsProps) {
   if (display === "carousel") {
-    const carouselItems = destinationsToMedia(destinations);
+    const carouselItems = attractionsToMedia(attractions);
     return (
-      <section {...props} className={cn(destinationsVariants({ variant }))}>
+      <section {...props} className={cn(attractionsVariants({ variant }))}>
         <div className="flex justify-center">
           <SwiperCarousel
             variant="thumbnailsNav"
@@ -80,30 +80,36 @@ function Destinations({
   }
 
   return (
-    <section {...props} className={cn(destinationsVariants({ variant }))}>
+    <section {...props} className={cn(attractionsVariants({ variant }))}>
       <div
         className={cn(
           "grid grid-cols-1 gap-6",
           variant !== "aside" && "md:grid-cols-2 lg:grid-cols-3",
         )}
       >
-        {destinations.map((destination: Destination, index: number) => (
+        {attractions.map((attraction: Attraction, index: number) => (
           <motion.div
-            key={index}
+            key={attraction.id}
             initial="initial"
             animate="animate"
             variants={fadeInAnimationVariants}
             custom={index}
           >
-            <DestinationCard
-              name={destination.name}
-              description={destination.description}
+            <AttractionCard
+              title={attraction.name}
+              description={attraction.description}
               image={{
-                src: destination.media[0]?.image ?? "",
-                alt: destination.media[0]?.altText ?? destination.name,
-                title: destination.media[0]?.title ?? destination.name,
+                src: attraction.media[0]?.image ?? "",
+                alt: attraction.media[0]?.altText ?? attraction.name,
+                title: attraction.media[0]?.title ?? attraction.name,
               }}
-              variant={variant === "aside" ? "compact" : variant}
+              variant={
+                variant === "aside"
+                  ? "compact"
+                  : variant === "detailed"
+                    ? "large"
+                    : variant
+              }
             />
           </motion.div>
         ))}
@@ -112,5 +118,5 @@ function Destinations({
   );
 }
 
-Destinations.displayName = "Destinations";
-export { Destinations, destinationsVariants };
+Attractions.displayName = "Attractions";
+export { Attractions, attractionsVariants };
