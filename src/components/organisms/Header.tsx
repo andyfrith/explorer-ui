@@ -1,10 +1,9 @@
 import { cva } from "class-variance-authority";
 import { Branding } from "../atoms/Branding";
+import { Navigation } from "../molecules/Navigation";
 import { SunIcon } from "lucide-react";
 
-interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  children?: React.ReactNode;
-}
+interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const headerVariants = cva("transition-all duration-200", {
   variants: {
@@ -30,16 +29,19 @@ const headerVariants = cva("transition-all duration-200", {
   },
 });
 
-function Header({ children, ...props }: HeaderProps) {
+function Header({ ...props }: HeaderProps) {
   return (
     <div {...props}>
-      <header className="p-2 flex items-center dark:bg-gray-800 text-white dark:shadow-lg">
+      <header className="flex flex-1 items-center gap-4 p-2 bg-white text-slate-900 shadow dark:bg-gray-800 dark:text-white dark:shadow-lg">
         <Branding
           logo={<SunIcon className="w-10 h-10 md:w-10 md:h-10 text-cyan-400" />}
           title="EXPLORER"
           subtitle="UI"
         />
-        {children}
+        <div className="flex flex-1 justify-center" aria-label="Primary navigation">
+          <Navigation />
+        </div>
+        <div className="flex-1" aria-hidden />
       </header>
     </div>
   );
