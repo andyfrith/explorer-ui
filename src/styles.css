@@ -276,3 +276,17 @@
   font-weight: 700;
   color: #828282;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px !important;
+}
+.swiper-pagination-bullet {
+  background: white !important;
+}

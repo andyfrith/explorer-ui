@@ -13,6 +13,7 @@ interface DestinationsLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   longitude: number;
   zoom: number;
   markers: Array<GeoPoint>;
+  display?: "grid" | "carousel";
 }
 
 const destinationsLayoutVariants = cva("transition-all duration-200", {
@@ -22,20 +23,9 @@ const destinationsLayoutVariants = cva("transition-all duration-200", {
       compact: "p-4",
       detailed: "p-6 space-y-4",
     },
-    status: {
-      success:
-        "border-green-200 bg-green-50/50 dark:border-green-800 dark:bg-green-950/50",
-      warning:
-        "border-yellow-200 bg-yellow-50/50 dark:border-yellow-800 dark:bg-yellow-950/50",
-      error:
-        "border-red-200 bg-red-50/50 dark:border-red-800 dark:bg-red-950/50",
-      info: "border-blue-200 bg-blue-50/50 dark:border-blue-800 dark:bg-blue-950/50",
-      neutral: "",
-    },
   },
   defaultVariants: {
     variant: "default",
-    status: "neutral",
   },
 });
 
@@ -45,6 +35,7 @@ function DestinationsLayout({
   longitude,
   zoom,
   markers,
+  display = "grid",
   ...props
 }: DestinationsLayoutProps) {
   return (
@@ -76,7 +67,7 @@ function DestinationsLayout({
         headline="Are you ready for your next great adventure?"
         subheadline="Dreaming of a tropical paradise? Or is it time to explore the great wilderness?  Perhaps it's shopping, museums and world-class entertainment you long for?"
       />
-      <Destinations destinations={destinations} />
+      <Destinations destinations={destinations} display={display} />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Destinations } from "./Destinations";
-import { destinations } from "@/data/destinations";
+import { Attractions } from "./Attractions";
+import { oahuAttractions } from "@/data/oahu/attractions";
 
-const meta: Meta<typeof Destinations> = {
-  title: "Molecules/Destinations",
-  component: Destinations,
+const meta: Meta<typeof Attractions> = {
+  title: "Molecules/Attractions",
+  component: Attractions,
   tags: ["autodocs"],
   argTypes: {
     display: {
@@ -16,12 +16,12 @@ const meta: Meta<typeof Destinations> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Destinations>;
+type Story = StoryObj<typeof Attractions>;
 
-/** Default grid of destination cards. */
+/** Default grid of attraction cards. */
 export const Grid: Story = {
   args: {
-    destinations,
+    attractions: oahuAttractions,
     display: "grid",
   },
 };
@@ -29,14 +29,14 @@ export const Grid: Story = {
 /** Carousel with thumbnails navigation. */
 export const Carousel: Story = {
   args: {
-    destinations,
+    attractions: oahuAttractions,
     display: "carousel",
   },
 };
 
 export const Compact: Story = {
   args: {
-    destinations,
+    attractions: oahuAttractions,
     variant: "compact",
     display: "grid",
   },
@@ -44,7 +44,7 @@ export const Compact: Story = {
 
 export const Aside: Story = {
   args: {
-    destinations,
+    attractions: oahuAttractions,
     variant: "aside",
     display: "grid",
   },
