@@ -12,6 +12,7 @@ interface DestinationLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   longitude: number;
   zoom: number;
   markers: Array<GeoPoint>;
+  /** Attractions to display for this destination (e.g. from attractions.json). */
   attractions?: Attraction[];
   variant?: "default" | "compact" | "detailed";
 }

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Attractions } from "./Attractions";
+import { Attractions } from "@/components/molecules/Attractions";
 import { oahuAttractions } from "@/data/oahu/attractions";
 
 const meta: Meta<typeof Attractions> = {

@@ -70,11 +70,10 @@ function Map({
     <div
       id="map"
       {...props}
-      className={cn(mapVariants({ variant }))}
+      className={cn(mapVariants({ variant }), "w-full h-full min-h-0 min-w-0")}
       style={{
-        width: width ?? "100vh",
-        height: height ?? "100vh",
-        paddingBottom: 10,
+        width: width ?? "100%",
+        height: height ?? "100%",
       }}
     >
       <MapLibreMap

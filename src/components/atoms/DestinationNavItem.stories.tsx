@@ -30,7 +30,7 @@ type Story = StoryObj<typeof DestinationNavItem>;
 
 export const Default: Story = {
   args: {
-    thumbnail: "/public/images/locations/HonoluluBeach.jpg",
+    thumbnail: "/images/locations/HonoluluBeach.jpg",
     thumbnailAlt: "Honolulu",
     title: "Honolulu",
   },
@@ -38,7 +38,7 @@ export const Default: Story = {
 
 export const WithLongTitle: Story = {
   args: {
-    thumbnail: "/public/images/locations/Paris.webp",
+    thumbnail: "/images/locations/Paris.webp",
     thumbnailAlt: "Paris",
     title: "Paris – Capital and most populous city of France",
   },

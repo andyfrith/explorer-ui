@@ -22,9 +22,9 @@
     "type": "MUSEUM",
     "media": [
       {
-        "image": "/public/images/locations/PearlHarborMemorial.jpg",
-        "thumbnailImage": "/public/images/locations/PearlHarborMemorial.jpg",
-        "url": "/public/images/locations/PearlHarborMemorial.jpg",
+        "image": "/images/locations/PearlHarborMemorial.jpg",
+        "thumbnailImage": "/images/locations/PearlHarborMemorial.jpg",
+        "url": "/images/locations/PearlHarborMemorial.jpg",
         "width": 1200,
         "height": 800,
         "size": 350000,
@@ -88,7 +88,7 @@
       {
         "image": "/images/attractions/oahu/DiamondHead.jpg",
         "thumbnailImage": "/images/attractions/oahu/DiamondHead.jpg",
-        "url": "/public/images/locations/PearlHarborMemorial.jpg",
+        "url": "/images/locations/PearlHarborMemorial.jpg",
         "width": 1000,
         "height": 667,
         "size": 280000,
@@ -151,7 +151,7 @@
       {
         "image": "/images/attractions/oahu/WaikikiBeach.jpg",
         "thumbnailImage": "/images/attractions/oahu/WaikikiBeach.jpg",
-        "url": "/public/images/locations/PearlHarborMemorial.jpg",
+        "url": "/images/locations/PearlHarborMemorial.jpg",
         "width": 1600,
         "height": 900,
         "size": 450000,
@@ -223,7 +223,7 @@
       {
         "image": "/images/attractions/oahu/NorthShore.jpg",
         "thumbnailImage": "/images/attractions/oahu/NorthShore.jpg",
-        "url": "/public/images/locations/PearlHarborMemorial.jpg",
+        "url": "/images/locations/PearlHarborMemorial.jpg",
         "width": 1920,
         "height": 1080,
         "size": 600000,
@@ -295,7 +295,7 @@
       {
         "image": "/images/attractions/oahu/HanaumaBay.jpg",
         "thumbnailImage": "/images/attractions/oahu/HanaumaBay.jpg",
-        "url": "/public/images/locations/PearlHarborMemorial.jpg",
+        "url": "/images/locations/PearlHarborMemorial.jpg",
         "width": 1400,
         "height": 933,
         "size": 400000,

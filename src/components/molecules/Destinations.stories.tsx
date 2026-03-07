@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Destinations } from "./Destinations";
+import { Destinations } from "@/components/molecules/Destinations";
 import { destinations } from "@/data/destinations";
 
 const meta: Meta<typeof Destinations> = {

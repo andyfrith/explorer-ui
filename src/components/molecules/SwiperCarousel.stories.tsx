@@ -1,20 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SwiperCarousel } from "@/components/molecules/SwiperCarousel";
+import { itemsToMedia } from "@/lib/carousel";
 import { destinations } from "@/data/destinations";
-import { MediaType, type Media } from "@/lib/types";
 
 /** Map destinations to Media format for the carousel. */
-const defaultItems: Media[] = destinations.map((d) => {
-  const first = d.media[0];
-  return {
-    title: d.name,
-    description: d.description,
-    image: first?.image ?? "",
-    thumbnailImage: first?.thumbnailImage ?? first?.image ?? "",
-    type: MediaType.IMAGE,
-    altText: first?.altText,
-  };
-});
+const defaultItems = itemsToMedia(destinations);
 
 const meta: Meta<typeof SwiperCarousel> = {
   title: "Molecules/SwiperCarousel",

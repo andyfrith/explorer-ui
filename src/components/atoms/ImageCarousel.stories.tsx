@@ -15,12 +15,12 @@ export const Default: Story = {
   render: () => (
     <ImageCarousel
       images={[
-        "/public/images/locations/HonoluluBeach.jpg",
-        "/public/images/locations/Alaska.jpeg",
-        "/public/images/locations/Paris.webp",
-        "/public/images/locations/SanFranciscoSkyline.jpg",
-        "/public/images/locations/qiddiya-performing-arts-centre.webp",
-        "/public/images/locations/NewYorkStatueofLiberty.avif",
+        "/images/locations/HonoluluBeach.jpg",
+        "/images/locations/Alaska.jpeg",
+        "/images/locations/Paris.webp",
+        "/images/locations/SanFranciscoSkyline.jpg",
+        "/images/locations/qiddiya-performing-arts-centre.webp",
+        "/images/locations/NewYorkStatueofLiberty.avif",
       ]}
       variant="default"
     />

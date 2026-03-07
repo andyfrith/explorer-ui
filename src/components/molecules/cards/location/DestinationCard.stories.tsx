@@ -20,7 +20,7 @@ export const Default: Story = {
       name="Alaska"
       description="Alaska is the largest state in the United States by area. It is known for its rugged terrain, snow-covered mountains, and the Northern Lights."
       image={{
-        src: "/public/images/locations/Alaska.jpeg",
+        src: "/images/locations/Alaska.jpeg",
         alt: "Alaska",
         title: "Alaska",
       }}
@@ -35,7 +35,7 @@ export const Compact: Story = {
       name="Honolulu"
       description="Honolulu is the capital and most populous city of the United States state of Hawaii. The city is the county seat of Honolulu County and the seat of the State of Hawaii."
       image={{
-        src: "/public/images/locations/HonoluluBeach.jpg",
+        src: "/images/locations/HonoluluBeach.jpg",
         alt: "Honolulu",
         title: "Honolulu",
       }}
@@ -50,7 +50,7 @@ export const Full: Story = {
       name="Honolulu"
       description="Honolulu is the capital and most populous city of the United States state of Hawaii. The city is the county seat of Honolulu County and the seat of the State of Hawaii."
       image={{
-        src: "/public/images/locations/HonoluluBeach.jpg",
+        src: "/images/locations/HonoluluBeach.jpg",
         alt: "Honolulu",
         title: "Honolulu",
       }}
@@ -66,7 +66,7 @@ export const Detailed: Story = {
       description="Honolulu is the capital and most populous city of the United States state of Hawaii. The city is the county seat of Honolulu County and the seat of the State of Hawaii."
       article="Exploring the concept of the “Pacific Century,” the Hawai‘i Triennial 2022 will be displayed until May at sites like the historic ‘Iolani Palace, while other new museums and experiences let visitors dive into Hawaiian history anytime. In Chinatown, the new Arts and Letters Nu‘uanu cultural space has exhibitions featuring local artists and those with ties to the islands and conversations with artists, often over ‘awa, a drink made from the root of the kava plant. Shangri La Museum of Islamic Art, Culture & Design examines the intersection of Hawaiian and Islamic culture. A serialized exhibition in its second year, 8×8 showcases the islands' visual and performance artists, while an upcoming artist residency pairs Chicago musician Zeshan Bagewadi with the Hawai‘i Symphony Orchestra. End any day onboard the new Kamoauli, a traditional Polynesian wooden double-hulled sailing canoe, offering sunset sails and a chance to learn about poi and hula."
       image={{
-        src: "/public/images/locations/HonoluluBeach.jpg",
+        src: "/images/locations/HonoluluBeach.jpg",
         alt: "Honolulu",
         title: "Honolulu",
       }}

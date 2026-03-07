@@ -6,7 +6,7 @@ interface AttractionProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string;
   icons?: Array<React.ReactNode>;
   image?: { src: string; alt: string; title: string };
-  variant: "default" | "compact" | "detailed" | "large";
+  variant: "default" | "compact" | "large" | "full";
   children?: React.ReactNode;
 }
 

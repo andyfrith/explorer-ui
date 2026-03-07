@@ -69,30 +69,5 @@ function ImageCarousel({
   );
 }
 
-// )
-// return (
-//   <div {...props}>
-//     <header className="p-2 flex items-center text-white">
-//       <div className="flex flex-row justify-center items-center gap-2 ml-0 text-xl font-semibold">
-//         <Link
-//           to="/"
-//           className="flex flex-row justify-center items-center gap-2"
-//         >
-//           {logo}
-
-//           <span className="dark:text-gray-300 text-3xl md:text-3xl font-black text-gray-500 tracking-[-0.02em]">
-//             {title}
-//           </span>
-//           <span className="text-gray-300 text-3xl md:text-3xl font-black tracking-[-0.02em] bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-//             {subtitle}
-//           </span>
-//         </Link>
-//       </div>
-//     </header>
-//     {children}
-//   </div>
-// );
-// }
-
 ImageCarousel.displayName = "ImageCarousel";
 export { ImageCarousel, imageCarouselVariants };
